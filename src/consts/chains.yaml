@@ -3,18 +3,28 @@
 # Chains already in the SDK need not be included here unless you want to override some fields
 # Schema here: https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/metadata/chainMetadataTypes.ts
 ---
-# Example using local anvil chain:
-# anvil1:
-#   chainId: 31337
-#   domainId: 31337
-#   name: anvil1
-#   protocol: ethereum
-#   rpcUrls:
-#     - http: http://127.0.0.1:8545
-# anvil2:
-#   chainId: 31338
-#   domainId: 31338
-#   name: anvil2
-#   protocol: ethereum
-#   rpcUrls:
-#     - http: http://127.0.0.1:8555
+piccadilly:
+  blockExplorers:
+    - apiUrl: https://piccadilly.autonity.org/api
+      family: blockscout
+      name: BlockScout
+      url: https://piccadilly.autonity.org
+  blocks:
+    confirmations: 1
+    estimateBlockTime: 1
+  chainId: 65100003
+  deployer:
+    name: M8B
+    url: https://m8b.dev
+  displayName: Autonity Piccadilly
+  displayNameShort: Piccadilly
+  domainId: 65100003
+  isTestnet: true
+  name: piccadilly
+  nativeToken:
+    decimals: 18
+    name: Auton
+    symbol: ATN
+  protocol: ethereum
+  rpcUrls:
+    - http: https://rpc1.piccadilly.autonity.org

@@ -2,5 +2,54 @@
 # These configs will be merged with the warp routes in the configured registry
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
-tokens: []
+tokens:
+  - addressOrDenom: "0x123B520fDd5De936bd94A73a2D6225C1276771c9"
+    chainName: holesky
+    connections:
+      - token: ethereum|piccadilly|0xB7A40dBEcf4b970BA58AFEC95f484CbCaEB6b234
+    decimals: 18
+    name: Auton
+    standard: EvmHypSynthetic
+    symbol: ATN
+  - addressOrDenom: "0xB7A40dBEcf4b970BA58AFEC95f484CbCaEB6b234"
+    chainName: piccadilly
+    connections:
+      - token: ethereum|holesky|0x123B520fDd5De936bd94A73a2D6225C1276771c9
+    decimals: 18
+    name: Auton
+    standard: EvmHypNative
+    symbol: ATN
+  - addressOrDenom: "0xdF73856d44C1f7b3B14Fd0DaD8B0792fCf1c3f68"
+    chainName: holesky
+    connections:
+      - token: ethereum|piccadilly|0xB671973E737c1793eE5AbCaA97769d7a81445704
+    decimals: 18
+    name: Newton
+    standard: EvmHypSynthetic
+    symbol: NTN
+  - addressOrDenom: "0xB671973E737c1793eE5AbCaA97769d7a81445704"
+    chainName: piccadilly
+    collateralAddressOrDenom: "0xBd770416a3345F91E4B34576cb804a576fa48EB1"
+    connections:
+      - token: ethereum|holesky|0xdF73856d44C1f7b3B14Fd0DaD8B0792fCf1c3f68
+    decimals: 18
+    name: Newton
+    standard: EvmHypCollateral
+    symbol: NTN
+  - addressOrDenom: "0x7f8C02dA6A2f56bD5ae52524717477B7d79F8D5C"
+    chainName: holesky
+    connections:
+      - token: ethereum|piccadilly|0x49195E6251aFa947319F29351be4bDfA617C6720
+    decimals: 18
+    name: Ether
+    standard: EvmHypNative
+    symbol: ETH
+  - addressOrDenom: "0x49195E6251aFa947319F29351be4bDfA617C6720"
+    chainName: piccadilly
+    connections:
+      - token: ethereum|holesky|0x7f8C02dA6A2f56bD5ae52524717477B7d79F8D5C
+    decimals: 18
+    name: Ether
+    standard: EvmHypSynthetic
+    symbol: ETH
 options: {}
